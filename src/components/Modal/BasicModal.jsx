@@ -22,6 +22,7 @@ export default function BasicModel({open}) {
   // const [open, setOpen] = React.useState(false);
   // const handleOpen = () => setOpen(true);
   // const handleClose = () => setOpen(false);
+  // modal
   console.log(open + "estamos dentro do modal")
 
   return (
