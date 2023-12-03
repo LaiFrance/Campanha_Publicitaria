@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-
 
 const style = {
   position: 'absolute',
@@ -15,16 +15,14 @@ const style = {
   boxShadow: 24,
   p: 4,
   backgroundColor: "orange",
+  
+
 };
 
-
-function BasicModal(props) {
-
-  const { openF } = props;
-  const [open, setOpen] = React.useState(openF);
-
+function BasicModal() {
+  const [open, setOpen] = React.useState(true);
+  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
 
 
   return (
@@ -32,15 +30,14 @@ function BasicModal(props) {
       <Modal
         open={open}
         onClose={handleClose}
-
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Usuario cadastrado com sucesso!
+          <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign: "center"}}>
+            Cadastro realizado com sucesso!
           </Typography>
+          
         </Box>
       </Modal>
     </div>
@@ -48,3 +45,4 @@ function BasicModal(props) {
 }
 
 export default BasicModal;
+

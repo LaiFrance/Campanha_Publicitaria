@@ -5,7 +5,6 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import Axios from "axios";
 import React from 'react';
-import BasicModal from "../Modal/BasicModal";
 
 
 const SignupSchema = Yup.object().shape({
@@ -19,12 +18,6 @@ const SignupSchema = Yup.object().shape({
   segment: Yup.string().required("Required"),
 });
 
-function onClickModal() {
-  console.log("clicou");
-  return (
-    <BasicModal openF={true} />
-  );
-}
 
   
 function SignupForm() {
@@ -165,7 +158,7 @@ function SignupForm() {
           <MenuItem value="Revendedor">Revendedor</MenuItem>
         </Field>
 
-        <Button type="submit" variant="contained" color="primary" onClick={onClickModal}>
+        <Button type="submit" variant="contained" color="primary" >
           Cadastrar
         </Button>
       </Form>
