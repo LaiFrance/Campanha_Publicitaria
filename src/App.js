@@ -5,7 +5,6 @@ import Signup from "./components/Forms/SignupForm";
 import Frame from "./components/Header/Frame";
 import "./App.css";
 import Grid from "@mui/material/Grid";
-import LoginForm from "./components/Forms/LoginForm";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       <Grid>
         <Grid item xs={12}>
           <Signup />
-          <LoginForm />
         </Grid>
       </Grid>
       <Footer />

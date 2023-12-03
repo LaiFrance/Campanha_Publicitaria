@@ -5,6 +5,8 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import Axios from "axios";
 import React from 'react';
+import { useState } from "react";
+import BasicModal from "../Modal/BasicModal";
 
 
 const SignupSchema = Yup.object().shape({
@@ -19,10 +21,24 @@ const SignupSchema = Yup.object().shape({
 });
 
 
-  
 function SignupForm() {
+
+  const [open, setOpen] = useState(false);
+
+  const changeProp = () => {
+    setOpen(true);
+    console.log(open + " modal no formulario")
+  };
+  
+  // function modal(){
+
+  //    setOpen(true);
+  //    <BasicModal open={open} />
+  // }
+
   return (
-    
+    <>
+    <BasicModal open={open} />
     <Formik
       initialValues={{
         name: "",
@@ -47,8 +63,9 @@ function SignupForm() {
           segment: values.segment,
         })
           .then((response) => {
-            console.log(response);
-          })
+            (response.status === 200 ? changeProp() : console.log("nao foi"));
+          }
+          )
           .catch((error) => {
             console.log(error.response);
           });
@@ -73,8 +90,13 @@ function SignupForm() {
           backgroundImage: "url(https://bitbucket.org/ateliedepropaganda/atelie-frontend-teste/raw/c0262b0b69248c521eb2de860705e71e50962035/-%20ASSETS/background-marrom.png)",
           backgroundSize: "cover",
         }}
+       
       >
-        <Field
+         <h1>Cadastre-se</h1>
+        <h4> Preencha os campos abaixo para validar sua participação
+          na campanha e concorrer a prêmios.</h4>
+
+        <Field 
           style={{ width: "50%" }}
           variant="standard"
           name="name"
@@ -145,6 +167,7 @@ function SignupForm() {
         <Field
           // Controlar select com formik e yup
           style={{ width: "50%" }}
+          variant="standard"
           name="segment"
           as={Select}
           label="segment"
@@ -164,6 +187,7 @@ function SignupForm() {
       </Form>
       )}
     </Formik>
+    </> 
   );
 }
 
