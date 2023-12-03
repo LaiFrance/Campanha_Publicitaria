@@ -8,23 +8,60 @@ import "./styles.css";
 
 function Frame() {
   return (
-    
     <div className="frameContainer">
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={7} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}> 
-          <Item style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <Grid
+          item
+          xs={12}
+          sm={7}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Item
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <img src={logocamapanha} alt="logo-campanha" />
-            <div className="buttonsgroup" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '20px' }}> 
-            <Button variant="contained" color="primary" href="/login" style={{ marginRight: '10px' }}>
-              Login
-            </Button>
-            <Button variant="contained" color="primary" href="/signup">
-              Cadastre-se
-            </Button>
+            <div
+              className="buttonsgroup"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "20px",
+              }}
+            >
+              <Button
+                variant="contained"
+                color="primary"
+                href="/login"
+                style={{ marginRight: "10px" }}
+              >
+                Login
+              </Button>
+              <Button variant="contained" color="primary" href="/signup">
+                Cadastre-se
+              </Button>
             </div>
-          </Item> 
+          </Item>
         </Grid>
-        <Grid item xs={12} sm={5} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Grid
+          item
+          xs={12}
+          sm={5}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Item>
             <img src={clouds} alt="clouds" />
           </Item>

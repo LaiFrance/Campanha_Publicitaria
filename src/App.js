@@ -7,13 +7,12 @@ import "./App.css";
 import Grid from "@mui/material/Grid";
 import LoginForm from "./components/Forms/LoginForm";
 
-
 function App() {
   return (
     <div>
       <Frame />
       <Grid>
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <Signup />
           <LoginForm />
         </Grid>
