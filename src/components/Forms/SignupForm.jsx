@@ -38,7 +38,7 @@ function SignupForm() {
 
   return (
     <>
-    <BasicModal open={open} />
+    <BasicModal open={open} setOpen={setOpen} />
     <Formik
       initialValues={{
         name: "",

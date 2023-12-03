@@ -18,10 +18,13 @@ const style = {
   p: 4,
 };
 
-export default function BasicModel({open}) {
+export default function BasicModel({open, setOpen}) {
   // const [open, setOpen] = React.useState(false);
   // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
+  const handleClose = () => {
+  setOpen(false); 
+  console.log("dentro do close")
+};
   // modal
   console.log(open + "estamos dentro do modal")
 
@@ -32,7 +35,7 @@ export default function BasicModel({open}) {
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
-        // onClose={handleClose}
+        onClose={handleClose}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
         slotProps={{
@@ -46,7 +49,6 @@ export default function BasicModel({open}) {
             <Typography id="transition-modal-title" variant="h6" component="h2">
               Cadastro realizado com sucesso!
             </Typography>
-           
           </Box>
         </Fade>
       </Modal>
