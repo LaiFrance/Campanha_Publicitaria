@@ -167,7 +167,7 @@ function SignupForm() {
             <InputLabel 
               id="demo-simple-select-standard-label"
             >
-              Classificação
+              
             </InputLabel>
             <Field 
               style={{ width: '45%' }}
@@ -179,6 +179,7 @@ function SignupForm() {
               helperText={touched.segment && errors.segment}
               margin="normal"
             >
+              
               <MenuItem value="Gerente">Gerente</MenuItem>
               <MenuItem value="Funcionário">Distribuidor</MenuItem>
               <MenuItem value="Revendedor">Revendedor</MenuItem>

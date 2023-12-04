@@ -58,7 +58,7 @@ function Frame() {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="/signup"
+                  href="/register"
                   style={{
                     width: '150px',
                     marginRight: '20px',

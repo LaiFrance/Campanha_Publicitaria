@@ -1,10 +1,17 @@
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('../src/asserts/Lato/Lato-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 body {
     display: block;
     margin: 0;
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
     color : white;
 }
 
@@ -12,6 +19,7 @@ input, textarea, button, label , select, input[type="text"], input[type="passwor
     font-family: 'Roboto', sans-serif;
     color: white !important;
 }
+
 
 
 img {
