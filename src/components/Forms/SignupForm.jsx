@@ -43,7 +43,7 @@ function SignupForm() {
         onSubmit={(values) => {
           console.log(values)
           Axios.post(
-            'http://api.teste-frontend.ateliedepropaganda.com.br/v1/register',
+            'https://api.teste-frontend.ateliedepropaganda.com.br/v1/register',
             {
               name: values.name,
               email: values.email,
