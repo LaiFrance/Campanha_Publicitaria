@@ -1,21 +1,16 @@
 // App.js
 import React from "react";
-import Footer from "./components/Footer/Footer";
-import Signup from "./components/Forms/SignupForm";
-import Frame from "./components/Header/Frame";
 import "./App.css";
-import Grid from "@mui/material/Grid";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+
+
 
 function App() {
   return (
     <div>
-      <Frame />
-      <Grid>
-        <Grid item xs={12}>
-          <Signup />
-        </Grid>
-      </Grid>
-      <Footer />
+      <RegisterPage />     
+      
     </div>
   );
 }

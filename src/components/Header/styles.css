@@ -3,13 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 20px;
+  max-width: 100vw;
   align-self: center;
   background-image: url("../../asserts/background.png");
   background-size: cover;
 }
-
 
 .logoContainer {
   display: flex;
@@ -29,3 +27,4 @@ Grid {
   background-image: url("../../asserts/background.png");
   background-size: cover;
 }
+

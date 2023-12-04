@@ -1,75 +1,82 @@
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
-import { Button, TextField } from "@mui/material";
+// LoginForm.js
+import * as React from 'react'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+import { Button, TextField } from '@mui/material'
+import Axios from 'axios'
+import { useState } from 'react'
+import BasicModal from '../Modal/BasicModal'
+import { formContainerStyle, fieldStyle } from './style.css/LoginForm.styles'
 
 const LoginSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
-  password: Yup.string().required("Required"),
-});
+  tax_id: Yup.string().required('Required'),
+  password: Yup.string().required('Required'),
+})
 
 function LoginForm() {
+  const [open, setOpen] = useState(false)
+
+  const changeProp = () => {
+    setOpen(true)
+  }
+
   return (
-    <Formik
-      initialValues={{
-        email: "",
-        password: "",
-      }}
-      validationSchema={LoginSchema}
-      onSubmit={(values) => {
-        console.log(values);
-        // Send data to the API
-      }}
-    >
-      {({ errors, touched }) => (
-        <>
-          <Form
-            style={{
-              display: "flex",
-              color: "white",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-              height: "100%",
-              padding: "20px",
-              alignSelf: "center",
-              backgroundImage:
-                "url(https://bitbucket.org/ateliedepropaganda/atelie-frontend-teste/raw/c0262b0b69248c521eb2de860705e71e50962035/-%20ASSETS/background-marrom.png)",
-              backgroundSize: "cover",
-            }}
-          >
+    <>
+      <BasicModal open={open} setOpen={setOpen} />
+      <Formik
+        initialValues={{
+          tax_id: '',
+          password: '',
+        }}
+        validationSchema={LoginSchema}
+        onSubmit={(values) => {
+          Axios.post(
+            'http://api.teste-frontend.ateliedepropaganda.com.br/v1/register',
+            values,
+          )
+            .then((response) => {
+              response.status === 200 ? changeProp() : console.log('nao foi')
+            })
+            .catch((error) => {
+              console.log(error.response)
+            })
+        }}
+      >
+        {({ errors, touched }) => (
+          <Form style={formContainerStyle}>
+            <h1>Login</h1>
+
             <Field
-              style={{ width: "50%" }}
+              style={fieldStyle}
               variant="standard"
-              name="email"
+              name="tax_id"
               as={TextField}
-              label="Email"
-              error={touched.email && Boolean(errors.email)}
-              helperText={touched.email && errors.email}
+              label="CPF/CNPJ"
+              error={touched.tax_id && Boolean(errors.tax_id)}
+              helperText={touched.tax_id && errors.tax_id}
               fullWidth
               margin="normal"
             />
+
             <Field
-              style={{ width: "50%" }}
+              style={fieldStyle}
               variant="standard"
               name="password"
               as={TextField}
-              label="Password"
-              type="password"
+              label="Senha"
               error={touched.password && Boolean(errors.password)}
               helperText={touched.password && errors.password}
               fullWidth
               margin="normal"
             />
-            <br />
             <Button type="submit" variant="contained" color="primary">
               Login
             </Button>
           </Form>
-        </>
-      )}
-    </Formik>
-  );
+        )}
+      </Formik>
+    </>
+  )
 }
 
-export default LoginForm;
+export default LoginForm

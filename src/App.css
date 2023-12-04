@@ -1,0 +1,40 @@
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Estilos para telas pequenas (celulares) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas médias (tablets) */
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para telas grandes (desktops) */
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para telas extra grandes (grandes desktops) */
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
