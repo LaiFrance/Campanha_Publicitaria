@@ -1,71 +1,90 @@
-# Getting Started with Create React App
+#  Frontend - Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto consiste em uma landing page para uma promoção que permite aos usuários se registrarem. O formulário de registro está integrado com uma API fornecida para o envio dos dados do usuário. Após o envio do formulário, um modal de sucesso é exibido.
 
-## Available Scripts
+## Início Rápido
+Siga estes passos para configurar e executar o projeto em sua máquina local.
 
-In the project directory, you can run:
+### Pré-requisitos
+Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 
-### `npm start`
+- Node.js: [Download Node.js](https://nodejs.org/en/download/)
+- npm: (Incluído com o Node.js)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalação
+Clone o repositório:
+```bash
+git clone https://github.com/LaiFrance/Campanha_Publicitaria.git
+```
+Navegue até o diretório do projeto:
+```bash
+cd Campanha_Publicitaria/
+```
+Instale as dependências:
+```bash
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Configuração
+Crie um arquivo .env na raiz do projeto e adicione o seguinte endpoint da API:
+```dotenv
+REACT_APP_API_URL=https://documenter.getpostman.com/view/9196190/UzQsw7Mg
+```
 
-### `npm test`
+### Executando a Aplicação
+Inicie o servidor de desenvolvimento:
+```bash
+npm start
+```
+Isso iniciará a aplicação no modo de desenvolvimento. Abra http://localhost:3000 em seu navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Estrutura do Formulário
+O formulário de registro inclui os seguintes campos:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Campo | Descrição
+--- | ---
+Nome | Nome do usuário
+CPF | Número do CPF
+Email | Endereço de e-mail
+Senha | Senha de acesso
+Confirmar Senha | Confirmação da senha
+Empresa | Nome da empresa
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Documentação do Projeto: login_register_app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependências
 
-### `npm run eject`
+Aqui estão as dependências usadas neste projeto:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Dependência | Versão |
+| ----------- | ------ |
+| @emotion/react | ^11.11.1 |
+| @emotion/styled | ^11.11.0 |
+| @mui/material | ^5.14.19 |
+| @testing-library/jest-dom | ^5.17.0 |
+| @testing-library/react | ^13.4.0 |
+| @testing-library/user-event | ^13.5.0 |
+| axios | ^1.6.2 |
+| formik | ^2.4.5 |
+| react | ^18.2.0 |
+| react-dom | ^18.2.0 |
+| react-input-mask | ^2.0.4 |
+| react-modal | ^3.16.1 |
+| react-router-dom | ^6.20.1 |
+| react-scripts | 5.0.1 |
+| styled-components | ^6.1.1 |
+| web-vitals | ^2.1.4 |
+| yup | ^1.3.2 |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Os scripts disponíveis para este projeto são:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Script | Descrição |
+| ------ | --------- |
+| start | Inicia o servidor de desenvolvimento |
+| build | Cria a versão de produção do aplicativo |
+| test | Executa os testes |
+| eject | Ejeta o aplicativo do create-react-app |
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Campanha_Publicitaria
