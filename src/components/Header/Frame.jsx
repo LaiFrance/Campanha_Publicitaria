@@ -1,21 +1,18 @@
 import React from 'react'
-import { Button, Grid, createTheme, ThemeProvider } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 import Item from '@mui/material/Grid'
 import logocampanhafooter from '../../asserts/logocampanhafooter.svg'
 import clouds from '../../asserts/clouds.png'
 import './styles.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import RegisterPage from '../../pages/RegisterPage/index'
+import LoginPage from '../../pages/LoginPage/index'
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#FFA500', // cor laranja
-    },
-  },
-})
+
 
 function Frame() {
-  return (
-    <ThemeProvider theme={theme}>
+  return (  
+    <Router>    
       <div className="frameContainer">
         <Grid container spacing={2}>
           <Grid
@@ -47,6 +44,7 @@ function Frame() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginTop: '60px',
+                  flexWrap: 'wrap', // Adicionado para tornar os botões responsivos
                 }}
               >
                 <Button
@@ -57,6 +55,7 @@ function Frame() {
                     width: '150px',
                     marginRight: '20px',
                     color: '#FFFFFF',
+                    marginBottom: '10px', // Adicionado para adicionar espaço entre os botões quando eles quebram a linha
                   }} // cor da fonte branca
                 >
                   Login
@@ -64,8 +63,13 @@ function Frame() {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="/signup"
-                  style={{ width: '150px', color: '#FFFFFF' }} // cor da fonte branca
+                  href="/register"
+                  style={{
+                    width: '150px',
+                    marginRight: '20px',
+                    color: '#FFFFFF',
+                    marginBottom: '10px', // Adicionado para adicionar espaço entre os botões quando eles quebram a linha
+                  }} // cor da fonte branca
                 >
                   Cadastre-se
                 </Button>
@@ -91,7 +95,12 @@ function Frame() {
           </Grid>
         </Grid>
       </div>
-    </ThemeProvider>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
+      </Routes>
+    </Router>
+
   )
 }
 

@@ -2,17 +2,25 @@
 import React from "react";
 import "./App.css";
 import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#FFA500', // cor laranja
+    },
+  },
+})
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div>
-      <RegisterPage />     
-      
+      <RegisterPage />  
     </div>
+    </ThemeProvider>
   );
+
 }
 
 export default App;
