@@ -3,6 +3,7 @@ import { Grid } from '@mui/material'
 import Item from '@mui/material/Grid'
 import backgroundcinza from '../../asserts/backgroundcinza.png'
 import logocampanhafooter from '../../asserts/logocampanhafooter.svg'
+import soquem from '../../asserts/soquem.png'
 
 function Footer() {
   return (
@@ -19,9 +20,11 @@ function Footer() {
       }}
     >
       <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
+        <Grid item xs={8}
+          style={{ display: 'flex', justifyContent: 'center', padding: '100px' }}
+        >
           <Item>
-            <h1>teste</h1>
+            <img src={soquem} alt="logo-campanha" />
           </Item>
         </Grid>
         <Grid
@@ -30,8 +33,7 @@ function Footer() {
           style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}
         >
           <Item>
-            <img src={logocampanhafooter} alt="logo-campanha" />
-            
+            <img src={logocampanhafooter} alt="logo-campanha" />      
           </Item>
         </Grid>
       </Grid>

@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div>
-      <RegisterPage />  
+     <RegisterPage />
     </div>
     </ThemeProvider>
   );

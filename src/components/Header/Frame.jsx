@@ -4,15 +4,10 @@ import Item from '@mui/material/Grid'
 import logocampanhafooter from '../../asserts/logocampanhafooter.svg'
 import clouds from '../../asserts/clouds.png'
 import './styles.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import RegisterPage from '../../pages/RegisterPage/index'
-import LoginPage from '../../pages/LoginPage/index'
-
 
 
 function Frame() {
-  return (  
-    <Router>    
+  return (      
       <div className="frameContainer">
         <Grid container spacing={2}>
           <Grid
@@ -44,7 +39,7 @@ function Frame() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginTop: '60px',
-                  flexWrap: 'wrap', // Adicionado para tornar os botões responsivos
+                  flexWrap: 'wrap', 
                 }}
               >
                 <Button
@@ -95,11 +90,7 @@ function Frame() {
           </Grid>
         </Grid>
       </div>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<RegisterPage />} />
-      </Routes>
-    </Router>
+     
 
   )
 }

@@ -181,7 +181,9 @@ function SignupForm() {
           <MenuItem value="Revendedor">Revendedor</MenuItem>
         </Field>
 
-        <Button type="submit" variant="contained" color="primary" >
+        <Button type="submit" variant="contained" color="primary" 
+style={{ color: "white", marginTop: "20px", marginBottom: "20px"}}
+>
           Cadastrar
         </Button>
       </Form>
