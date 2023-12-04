@@ -105,7 +105,7 @@ function SignupForm() {
           error={touched.name && Boolean(errors.name)}
           helperText={touched.name && errors.name}
           fullWidth
-          margin="normal" />
+           />
         <Field
           style={{ width: "50%" }}
           variant="standard"
@@ -115,7 +115,7 @@ function SignupForm() {
           error={touched.tax_id && Boolean(errors.tax_id)}
           helperText={touched.tax_id && errors.tax_id}
           fullWidth
-          margin="normal" />
+           />
         <Field
           style={{ width: "50%" }}
           variant="standard"
@@ -125,7 +125,7 @@ function SignupForm() {
           error={touched.email && Boolean(errors.email)}
           helperText={touched.email && errors.email}
           fullWidth
-          margin="normal" />
+           />
         <Field
           style={{ width: "50%" }}
           variant="standard"
@@ -136,7 +136,7 @@ function SignupForm() {
           error={touched.password && Boolean(errors.password)}
           helperText={touched.password && errors.password}
           fullWidth
-          margin="normal" />
+           />
         <Field
           style={{ width: "50%" }}
           variant="standard"
@@ -147,7 +147,7 @@ function SignupForm() {
           error={touched.password_confirmation && Boolean(errors.password_confirmation)}
           helperText={touched.password_confirmation && errors.password_confirmation}
           fullWidth
-          margin="normal" />
+           />
         <Field
           style={{ width: "50%" }}
           variant="standard"
@@ -157,7 +157,7 @@ function SignupForm() {
           error={touched.company && Boolean(errors.company)}
           helperText={touched.company && errors.company}
           fullWidth
-          margin="normal" />
+           />
         <InputLabel
           style={{ width: "50%" }}
           id="demo-simple-select-standard-label"
@@ -174,7 +174,7 @@ function SignupForm() {
           error={touched.segment && Boolean(errors.segment)}
           helperText={touched.segment && errors.segment}
           fullWidth
-          margin="normal"
+          
         >
           <MenuItem value="Gerente">Gerente</MenuItem>
           <MenuItem value="Funcionário">Distribuidor</MenuItem>

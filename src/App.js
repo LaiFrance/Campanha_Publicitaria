@@ -1,13 +1,15 @@
 // App.js
 import React from "react";
 import "./App.css";
-import RegisterPage from "./pages/RegisterPage";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import RegisterPage from './pages/RegisterPage/index'
+import LoginPage from './pages/LoginPage/index'
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#FFA500', // cor laranja
+      main: '#FFA500',
     },
   },
 })
@@ -15,9 +17,13 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <div>
-     <RegisterPage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
+        <Route path="/" element={<RegisterPage />} />
+      </Routes>
+    </Router>
     </ThemeProvider>
   );
 
