@@ -27,8 +27,9 @@ export default function BasicModel({open, setOpen}) {
       slotProps={{ backdrop: { timeout: 100 } }}
     >
       <Fade in={open}>
-        <Box sx={style}>
-          <Typography id="transition-modal-title" variant="h6" component="h2">
+        <Box sx={style} style={{textAlign: 'center', color:'black'}}>
+          <Typography id="transition-modal-title" variant="h6" component="h2" style={{textAlign: 'center', color:'black'}}>
+
             Cadastro realizado com sucesso!
           </Typography>
         </Box>
