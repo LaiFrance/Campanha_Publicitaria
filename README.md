@@ -50,3 +50,41 @@ Email | Endereço de e-mail
 Senha | Senha de acesso
 Confirmar Senha | Confirmação da senha
 Empresa | Nome da empresa
+
+# Documentação do Projeto: login_register_app
+
+## Dependências
+
+Aqui estão as dependências usadas neste projeto:
+
+| Dependência | Versão |
+| ----------- | ------ |
+| @emotion/react | ^11.11.1 |
+| @emotion/styled | ^11.11.0 |
+| @mui/material | ^5.14.19 |
+| @testing-library/jest-dom | ^5.17.0 |
+| @testing-library/react | ^13.4.0 |
+| @testing-library/user-event | ^13.5.0 |
+| axios | ^1.6.2 |
+| formik | ^2.4.5 |
+| react | ^18.2.0 |
+| react-dom | ^18.2.0 |
+| react-input-mask | ^2.0.4 |
+| react-modal | ^3.16.1 |
+| react-router-dom | ^6.20.1 |
+| react-scripts | 5.0.1 |
+| styled-components | ^6.1.1 |
+| web-vitals | ^2.1.4 |
+| yup | ^1.3.2 |
+
+## Scripts
+
+Os scripts disponíveis para este projeto são:
+
+| Script | Descrição |
+| ------ | --------- |
+| start | Inicia o servidor de desenvolvimento |
+| build | Cria a versão de produção do aplicativo |
+| test | Executa os testes |
+| eject | Ejeta o aplicativo do create-react-app |
+
