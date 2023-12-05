@@ -27,7 +27,14 @@ export default function BasicModel({ open, setOpen }) {
       slotProps={{ backdrop: { timeout: 100 } }}
     >
       <Fade in={open}>
-        <Box sx={style} style={{ textAlign: 'center', color: 'black', backgroundColor: 'orange' }}>
+        <Box
+          sx={style}
+          style={{
+            textAlign: 'center',
+            color: 'black',
+            backgroundColor: 'orange',
+          }}
+        >
           <Typography
             id="transition-modal-title"
             variant="h6"

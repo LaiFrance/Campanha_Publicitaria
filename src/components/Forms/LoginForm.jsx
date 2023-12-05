@@ -35,7 +35,7 @@ function LoginForm() {
             values,
           )
             .then((response) => {
-              response.status === 200 ? changeProp() : console.log('nao foi')
+              response.status === 200 ? changeProp() : console.log('error')
             })
             .catch((error) => {
               console.log(error.response)
@@ -51,7 +51,7 @@ function LoginForm() {
               variant="standard"
               name="tax_id"
               as={TextField}
-              label="CPF/CNPJ"
+              label="Digite seu CPF"
               error={touched.tax_id && Boolean(errors.tax_id)}
               helperText={touched.tax_id && errors.tax_id}
               fullWidth
@@ -63,7 +63,7 @@ function LoginForm() {
               variant="standard"
               name="password"
               as={TextField}
-              label="Senha"
+              label="Digite sua senha"
               error={touched.password && Boolean(errors.password)}
               helperText={touched.password && errors.password}
               fullWidth
@@ -73,9 +73,9 @@ function LoginForm() {
               type="submit"
               variant="contained"
               color="primary"
-              style={{ marginTop: '20px' }}
+              style={{ marginTop: '20px' , marginBottom: '20px'}}
             >
-              Login
+              Entrar
             </Button>
           </Form>
         )}
