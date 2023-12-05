@@ -52,8 +52,41 @@ Senha | Senha de acesso
 Confirmar Senha | Confirmação da senha
 Empresa | Nome da empresa
 
-# Documentação do Projeto: login_register_app
+Peço desculpas pela confusão. Você está correto. Para iniciar o backend, você deve usar o comando `npm run backend`. Aqui está a documentação corrigida:
 
+# Documentação da API
+
+## Início
+
+Para iniciar a API, você precisa digitar o seguinte comando no terminal:
+
+```bash
+npm run backend
+```
+
+## Rotas
+
+### /login
+
+A rota `/login` é usada para autenticar usuários. Ela retorna os detalhes dos usuários cadastrados.
+
+## Porta
+
+A API está configurada para rodar na porta `5000`.
+
+## Testes
+
+Para testar a API, você pode usar ferramentas como Postman ou cURL. Aqui está um exemplo de como você pode testar a rota de login usando cURL:
+
+```bash
+curl -X GET http://localhost:5000/login
+```
+
+Lembre-se de substituir `localhost` pelo endereço IP do servidor onde a API está sendo executada, se necessário. 
+
+## Notas
+
+Esta é uma API fictícia criada para fins de demonstração. Assegure-se de implementar medidas de segurança adequadas (como autenticação e autorização) ao criar uma API real.
 ## Dependências
 
 Aqui estão as dependências usadas neste projeto:
