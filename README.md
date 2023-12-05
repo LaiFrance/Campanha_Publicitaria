@@ -54,7 +54,7 @@ Empresa | Nome da empresa
 
 Peço desculpas pela confusão. Você está correto. Para iniciar o backend, você deve usar o comando `npm run backend`. Aqui está a documentação corrigida:
 
-# Documentação da API
+# Documentação da API fake do Backend
 
 ## Início
 
