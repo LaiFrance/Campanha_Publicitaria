@@ -23,8 +23,15 @@ function SignupForm() {
 
   const changeProp = () => {
     setOpen(true)
-    console.log(open + ' modal no formulario')
+    
   }
+
+  // function SenhasNaoConferem( password, password_confirmation) {
+  //   if (password !== password_confirmation) {
+  //     return
+  //     alert ('senhas não conferem')
+  //   }
+  // }
 
   return (
     <>
@@ -83,25 +90,21 @@ function SignupForm() {
             <h1>Cadastre-se</h1>
             <h4>
               {' '}
-              Preencha os campos abaixo para validar sua participação 
-              {' '}
-              <br/>
-
-             na campanha e concorrer a prêmios.
+              Preencha os campos abaixo para validar sua participação <br />
+              na campanha e concorrer a prêmios.
             </h4>
 
-            
-              <Field
-                style={{ width: '45%' }}
-                variant="standard"
-                name="name"
-                as={TextField}
-                label="Name"
-                error={touched.name && Boolean(errors.name)}
-                helperText={touched.name && errors.name}
-                margin="normal"
-              />
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Field
+              style={{ width: '45%' }}
+              variant="standard"
+              name="name"
+              as={TextField}
+              label="Name"
+              error={touched.name && Boolean(errors.name)}
+              helperText={touched.name && errors.name}
+              margin="normal"
+            />
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Field
                 style={{ width: '50%' }}
                 variant="standard"
@@ -112,7 +115,7 @@ function SignupForm() {
                 helperText={touched.tax_id && errors.tax_id}
                 margin="normal"
               />
-           
+
               <Field
                 style={{ width: '45%' }}
                 variant="standard"
@@ -123,7 +126,7 @@ function SignupForm() {
                 helperText={touched.email && errors.email}
                 margin="normal"
               />
-              </div>
+            </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Field
@@ -137,7 +140,7 @@ function SignupForm() {
                 helperText={touched.password && errors.password}
                 margin="normal"
               />
-            
+
               <Field
                 style={{ width: '45%' }}
                 variant="standard"
@@ -145,13 +148,24 @@ function SignupForm() {
                 as={TextField}
                 label="Confirm Password"
                 type="password"
-                error={touched.password_confirmation && Boolean(errors.password_confirmation)}
-                helperText={touched.password_confirmation && errors.password_confirmation}
+                error={
+                  touched.password_confirmation &&
+                  Boolean(errors.password_confirmation)
+                }
+                helperText={
+                  touched.password_confirmation && errors.password_confirmation
+                }
                 margin="normal"
               />
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between' , marginTop: '20px'}}>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginTop: '20px',
+              }}
+            >
               <Field
                 style={{ width: '45%' }}
                 variant="standard"
@@ -162,33 +176,31 @@ function SignupForm() {
                 helperText={touched.company && errors.company}
                 margin="normal"
               />
-              
-            
-            <InputLabel 
-              id="demo-simple-select-standard-label"
-            >
-              
-            </InputLabel>
-            <Field 
-              style={{ width: '45%' }}
-              variant="standard"
-              name="segment"
-              as={Select}
-              label="segment"
-              error={touched.segment && Boolean(errors.segment)}
-              helperText={touched.segment && errors.segment}
-              margin="normal"
-            >
-              
-              <MenuItem value="Gerente">Gerente</MenuItem>
-              <MenuItem value="Funcionário">Distribuidor</MenuItem>
-              <MenuItem value="Revendedor">Revendedor</MenuItem>
-            </Field>
+
+              <InputLabel id="demo-simple-select-standard-label"></InputLabel>
+              <Field
+                style={{ width: '45%' }}
+                variant="standard"
+                name="segment"
+                as={Select}
+                label="segment"
+                error={touched.segment && Boolean(errors.segment)}
+                helperText={touched.segment && errors.segment}
+                margin="normal"
+              >
+                <MenuItem value="Gerente">Gerente</MenuItem>
+                <MenuItem value="Funcionário">Distribuidor</MenuItem>
+                <MenuItem value="Revendedor">Revendedor</MenuItem>
+              </Field>
             </div>
-            <Button type="submit" variant="contained" color="primary" style={{ marginTop: '20px'}}>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              style={{ marginTop: '20px' }}
+            >
               Enviar
             </Button>
-
           </Form>
         )}
       </Formik>

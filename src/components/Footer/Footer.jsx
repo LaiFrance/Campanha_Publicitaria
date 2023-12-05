@@ -43,20 +43,18 @@ function Footer() {
           </Item>
         </Grid>
       </Grid>
-            <div
-              style={{
-                left: 0,
-                bottom: 0,
-                width: '100%',
-                backgroundColor: 'orange',
-                color: 'white',
-                textAlign: 'center',
-              }}
-            >
-             <p>
-              
-             </p>
-            </div>
+      <div
+        style={{
+          left: 0,
+          bottom: 0,
+          width: '100%',
+          backgroundColor: 'orange',
+          color: 'white',
+          textAlign: 'center',
+        }}
+      >
+        <p></p>
+      </div>
     </div>
   )
 }
