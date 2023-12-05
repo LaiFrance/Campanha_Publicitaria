@@ -1,4 +1,3 @@
-// LoginForm.js
 import * as React from 'react'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
@@ -31,11 +30,15 @@ function LoginForm() {
         validationSchema={LoginSchema}
         onSubmit={(values) => {
           Axios.post(
-            'http://api.teste-frontend.ateliedepropaganda.com.br/v1/register',
+            'http://localhost:5000/login',
             values,
           )
             .then((response) => {
-              response.status === 200 ? changeProp() : console.log('error')
+              if (response.status === 200 && response.data.length > 0) {
+                changeProp()
+              } else {
+                console.log('Usuário não encontrado')
+              }
             })
             .catch((error) => {
               console.log(error.response)

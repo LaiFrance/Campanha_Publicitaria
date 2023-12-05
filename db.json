@@ -1,0 +1,34 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "tax_id": "12345678901",
+      "password": "senha123"
+    },
+    {
+      "tax_id": "teste",
+      "password": "teste",
+      "id": 2
+    },
+    {
+      "tax_id": "06340923402",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "tax_id": "teste",
+      "password": "teste",
+      "id": 4
+    },
+    {
+      "tax_id": "teste",
+      "password": "teste",
+      "id": 5
+    },
+    {
+      "tax_id": "teste",
+      "password": "teste",
+      "id": 6
+    }
+  ]
+}
